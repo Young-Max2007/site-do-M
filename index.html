@@ -153,6 +153,29 @@
                         0 0 40px #5d41fa
                     ;
                 }
+                .estrela {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background: white;
+                border-radius: 50%;
+                box-shadow: 0 0 10px white, 0 0 20px white;
+                animation: brilho 1.5s ease-out forwards;
+              }
+              @keyframes brilho {
+                0% {
+                  opacity: 0;
+                  transform: scale(0.5);
+                }
+                50% {
+                  opacity: 1;
+                  transform: scale(1.5);
+                }
+                100% {
+                  opacity: 0;
+                  transform: scale(0);
+                }
+              }
                 #btn {
                     padding: 10px 17px;
                     font-size: 40px;
@@ -239,7 +262,37 @@
                     width: 90%;
                 }
                 }
-
+               #msgBotao {
+                   text-align: center;
+                   opacity: 50%
+                   margin-top: 10px;
+                   font-size: 22px;
+                   color: #f0f8ff;
+                   font-style: italic;
+                   text-shadow:
+                       0 0 8px #a0b6ff,
+                       0 0 15px #6b8cff,
+                       0 0 25px #3f5dff;
+                   animation: piscarBrilho 4s infinite ease-in-out;
+                   opacity: 1;
+                   transition: opacity 1s ease;
+               }
+               
+               @keyframes piscarBrilho {
+                   0%, 100% {
+                       text-shadow:
+                           0 0 5px #a0b6ff,
+                           0 0 10px #6b8cff,
+                           0 0 15px #3f5dff;
+                   }
+                   50% {
+                       text-shadow:
+                           0 0 15px #c7d6ff,
+                           0 0 30px #a0b6ff,
+                           0 0 40px #6b8cff;
+                   }
+               }
+               
             </style>
         </head>
         <body>
@@ -252,6 +305,7 @@
                 <h2 id="tlgd">"Tá ligado..."</h2>
                 <audio id="musicaM" src="M-digitos.mp3"></audio>
                 <a href="#" id="btn" onclick="document.getElementById('musicaM').play()">É o M!!!</a>
+                <p id="msgBotao">☆ Clique no botão para ouvir uma música! :)</p>
                 <hr class="neon"/>
                 <article>
                     <h2 class="topic">Quem é Massaru?</h2>
@@ -282,16 +336,39 @@
                     <br/>
                     <h2 class="topic">Álbuns famosos</h2>
                     <h2 class="topic2">1°: Shuriken (2018) – Mixtape</h2>
-                    <img src="https://i.scdn.co/image/ab67616d0000b273672bbd17fdaf16574373a05c" alt="Shuriken (2018)" class="img2">
+                    <a href="https://open.spotify.com/intl-pt/album/7EdJerHlO2VTSbD6GRXEoJ" class="botoes"><img src="https://i.scdn.co/image/ab67616d0000b273672bbd17fdaf16574373a05c" alt="Shuriken (2018)" class="img2"></a>
                     <h2 class="topic3">Kai (2020) – Mixtape</h2>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWzZbQpekOoTzIio9FeBw6WXU8E2MOc-LjGQ&s" alt="Kai (2020)" class="img3">
+                    <a href="https://open.spotify.com/intl-pt/album/13Jv0A0V7ar72CF6qyB1zv" class="botoes"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWzZbQpekOoTzIio9FeBw6WXU8E2MOc-LjGQ&s" alt="Kai (2020)" class="img3"></a>
                     <h2 id="topicoPequeno">M (2021) – EP</h2>
-                    <img src="https://cdn-images.dzcdn.net/images/cover/8112865484adc2da525e254b9dd8dac7/1900x1900-000000-80-0-0.jpg" alt="M (2021)" class="img2">
+                    <a href="https://open.spotify.com/intl-pt/album/1pPze7clk7CpIE5DViPFwz" class="botoes"><img src="https://cdn-images.dzcdn.net/images/cover/8112865484adc2da525e254b9dd8dac7/1900x1900-000000-80-0-0.jpg" alt="M (2021)" class="img2"></a>
                     <h2 class="topic3">Majin (final de 2023) – EP</h2>
-                    <img src="https://cdn-images.dzcdn.net/images/cover/0df917115b35197619af4ec309b9ddb2/0x1900-000000-80-0-0.jpg" alt="Majin (final de 2023)" class="img3">
+                    <a href="https://open.spotify.com/intl-pt/album/6yFokMCUc6VVmZQQ7bptMt" class="botoes"><img src="https://cdn-images.dzcdn.net/images/cover/0df917115b35197619af4ec309b9ddb2/0x1900-000000-80-0-0.jpg" alt="Majin (final de 2023)" class="img3"></a>
                     <h2 class="topic2">Sim ou Não (2024) – Mixtape</h2>
-                    <img src="https://i.scdn.co/image/ab67616d00001e027e53d85d22df94eb403d52eb" alt="Sim ou Não (2024)" class="img2">
+                    <a href="https://open.spotify.com/intl-pt/album/3Tos7AqFcXHHFgD9j1Yanz" class="botoes"><img src="https://i.scdn.co/image/ab67616d00001e027e53d85d22df94eb403d52eb" alt="Sim ou Não (2024)" class="img2"></a>
                 </article>
             </div>
+            
+            <script>
+            function criarEstrela() {
+                const estrela = document.createElement('div');
+                estrela.classList.add('estrela');
+                estrela.style.left = Math.random() * window.innerWidth + 'px';
+                estrela.style.top = Math.random() * document.body.scrollHeight + 'px';
+                document.body.appendChild(estrela);
+                setTimeout(() => {
+                estrela.remove();
+                }, 1500);
+            }
+
+            setInterval(criarEstrela, 100);
+            
+            function esconderMensagem() {
+    const msg = document.getElementById('msgBotao');
+    msg.style.opacity = '0';
+    msg.style.pointerEvents = 'none';
+}
+
+            </script>
+            
         </body>
         </html>
