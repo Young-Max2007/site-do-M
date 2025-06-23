@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8" />
+            <title>É o m</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+            <style>
+                body {
+                    background-image: url(https://wallpapercave.com/wp/wp5504914.jpg);
+                    background-size: cover;
+                    color: #ffffff;
+                    font-family: "Cabin", sans-serif;
+                    text-align: center;
+                    padding-top: 50px;
+                }
+                #pag {
+                    animation: fadeInUp 1.2s ease-out;
+                    width: 1000px;
+                    overflow: hidden;
+                    text-align: center;
+                    margin: 0px auto;
+                    padding: 30px 60px;
+                    border-radius: 25px;
+                    box-shadow: 
+                        0 0 10px #2600ff,
+                        0 0 20px #2600ff,
+                        0 0 30px #2600ff,
+                        0 0 40px #b2a5ff
+                    ;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                h1 {
+                    font-family: "Tangerine", cursive;
+                    font-size: 150px;
+                    text-shadow:
+                        0 0 10px #d3cbff,
+                        0 0 20px #d3cbff,
+                        0 0 30px #d3cbff,
+                        0 0 40px #ffffff
+                    ;
+                }
+                #tlgd {
+                    font-size: 50px;
+                    font-style: italic;
+                    text-align: center;
+                }
+                .topic {
+                    font-size: 40px;
+                    font-style: italic;
+                    text-align: left;
+                }
+                .topic2 {
+                    font-size: 40px;
+                    font-style: italic;
+                    text-align: left;
+                    text-shadow:
+                        0 0 10px #d3cbff,
+                        0 0 20px #d3cbff,
+                        0 0 30px #d3cbff,
+                        0 0 40px #ffffff
+                    ;
+                }
+                .topic3 {
+                    font-size: 40px;
+                    font-style: italic;
+                    text-align: right;
+                    text-shadow:
+                        0 0 10px #d3cbff,
+                        0 0 20px #d3cbff,
+                        0 0 30px #d3cbff,
+                        0 0 40px #ffffff
+                    ;
+                }
+                #topicoPequeno {
+                    margin-left: 120px;
+                    font-size: 40px;
+                    font-style: italic;
+                    text-align: left;
+                    text-shadow:
+                        0 0 10px #d3cbff,
+                        0 0 20px #d3cbff,
+                        0 0 30px #d3cbff,
+                        0 0 40px #ffffff
+                    ;
+                }
+                p {
+                    font-size: 20px;
+                    text-align: left;
+                }
+                ul {
+                    font-size: 25px;
+                    text-align: left;
+                }
+                #img1 {
+                    width: 250px;
+                    height: 300px;
+                    border-radius: 30px;
+                    border: 2px solid #fbfaff;
+                    box-shadow: 
+                        0 0 10px #ccc4fc,
+                        0 0 20px #2600ff,
+                        0 0 30px #2600ff,
+                        0 0 40px #5d41fa
+                    ;
+                }
+                .img2 {
+                    width: 250px;
+                    height: 250px;
+                    float: left;
+                    margin: 0px 120px;
+                    border-radius: 30px;
+                    border: 2px solid #fbfaff;
+                    box-shadow: 
+                        0 0 10px #ccc4fc,
+                        0 0 20px #2600ff,
+                        0 0 30px #2600ff,
+                        0 0 40px #5d41fa
+                    ;
+                }
+                .img3 {
+                    width: 250px;
+                    height: 250px;
+                    margin: 0px 0px 0px 120px;
+                    border-radius: 30px;
+                    border: 2px solid #fbfaff;
+                    box-shadow: 
+                        0 0 10px #ccc4fc,
+                        0 0 20px #2600ff,
+                        0 0 30px #2600ff,
+                        0 0 40px #5d41fa
+                    ;
+                }
+                .neon {
+                    margin: 30px auto;
+                    border: none;
+                    height: 5px;
+                    width: 85%;
+                    border-radius: 18px;
+                    background: #fbfaff;
+                    box-shadow: 
+                        0 0 10px #2600ff,
+                        0 0 20px #2600ff,
+                        0 0 30px #2600ff,
+                        0 0 40px #5d41fa
+                    ;
+                }
+                #btn {
+                    padding: 10px 17px;
+                    font-size: 40px;
+                    color: #adc3ff;
+                    font-family: "Playfair", serif;
+                    font-style: italic;
+                    border-radius: 29px;
+                    background-color: black;
+                    border: 1px #b1dcff solid;
+                    text-decoration: none;
+                    text-shadow:
+                        0 0 10px #1f00a7,
+                        0 0 20px #1f00a7,
+                        0 0 30px #1f00a7,
+                        0 0 40px #2f00ff;
+                    box-shadow: 
+                        0 0 10px #1f00a7,
+                        0 0 10px #1f00a7,
+                        0 0 10px #1f00a7,
+                        0 0 10px #2f00ff;
+                }
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                @media (max-width: 768px) {
+                    body {
+                        padding-top: 20px;
+                    }
+
+                    #pag {
+                        width: 95%;
+                        height: auto;
+                        padding: 20px;
+                    }
+
+                    h1 {
+                        font-size: 80px;
+                    }
+
+                    #tlgd {
+                        font-size: 30px;
+                    }
+
+                    .topic,
+                    .topic2,
+                    .topic3,
+                    #topicoPequeno {
+                        font-size: 28px;
+                        text-align: center;
+                        margin: 20px 0;
+                    }
+
+                p,
+                ul {
+                    font-size: 18px;
+                    text-align: justify;
+                }
+
+                #btn {
+                    font-size: 28px;
+                    padding: 8px 15px;
+                    display: inline-block;
+                    margin: 20px 0;
+                }
+
+                #img1,
+                .img2,
+                .img3 {
+                    width: 90%;
+                    height: auto;
+                    margin: 20px auto;
+                    display: block;
+                    float: none;
+                }
+
+                hr.neon {
+                    width: 90%;
+                }
+                }
+
+            </style>
+        </head>
+        <body>
+            <div id="pag">
+                <header>
+                    <hr class="neon"/>
+                    <h1>Massaru</h1>
+                    <hr class="neon"/>
+                </header>
+                <h2 id="tlgd">"Tá ligado..."</h2>
+                <a href="https://wallpapercave.com/wp/wp5504914.jpg" id="btn">É o M!!!</a>
+                <hr class="neon"/>
+                <article>
+                    <h2 class="topic">Quem é Massaru?</h2>
+                    <p class="textos">
+                        Adaptando o trap pro funk, Massaru é mais um artista da nova geração que vem 
+                        se destacando na levada como Kyan, KayBlack e Borges. Massaru é Rapper brasileiro 
+                        conhecido por hits como "Moda" e "Artigo de Grife". Suas músicas são ouvidas mensalmente 
+                        por mais de 400.000 pessoas no Spotify, com a faixa "Moda" somando mais de 13 milhões de 
+                        reproduções. Suas canções, principalmente as do início da carreia, têm fortes inspirações 
+                        em animes japoneses.
+                    </p>
+                    <br/>
+                    <img src="https://i.pinimg.com/736x/db/68/9c/db689c439d7e7796fec4e2baa39b23bd.jpg" alt="Massaru" id="img1">
+                    <br/>
+                    <h2 class="topic">Antes da fama</h2>
+                    <p class="textos">
+                        Começou sua jornada musical compondo músicas poéticas e românticas, mas em 2018 lançou seu 
+                        primeiro trap, chamado "Shuriken".
+                    </p>
+                    <br/>
+                    <h2 class="topic">Vida pessoal</h2>
+                    <ul>
+                        <li>idade - 26 anos</li>
+                        <li>local de nascimento - Brasil</li>
+                        <li>Aniversário - 08 de Abril, 1999</li>
+                        <li>Cresceu no Jardim Brasil, Zona Norte de São Paulo</li>
+                    </ul>
+                    <br/>
+                    <h2 class="topic">Álbuns famosos</h2>
+                    <h2 class="topic2">1°: Shuriken (2018) – Mixtape</h2>
+                    <img src="https://i.scdn.co/image/ab67616d0000b273672bbd17fdaf16574373a05c" alt="Shuriken (2018)" class="img2">
+                    <h2 class="topic3">Kai (2020) – Mixtape</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWzZbQpekOoTzIio9FeBw6WXU8E2MOc-LjGQ&s" alt="Kai (2020)" class="img3">
+                    <h2 id="topicoPequeno">M (2021) – EP</h2>
+                    <img src="https://cdn-images.dzcdn.net/images/cover/8112865484adc2da525e254b9dd8dac7/1900x1900-000000-80-0-0.jpg" alt="M (2021)" class="img2">
+                    <h2 class="topic3">Majin (final de 2023) – EP</h2>
+                    <img src="https://cdn-images.dzcdn.net/images/cover/0df917115b35197619af4ec309b9ddb2/0x1900-000000-80-0-0.jpg" alt="Majin (final de 2023)" class="img3">
+                    <h2 class="topic2">Sim ou Não (2024) – Mixtape</h2>
+                    <img src="https://i.scdn.co/image/ab67616d00001e027e53d85d22df94eb403d52eb" alt="Sim ou Não (2024)" class="img2">
+                </article>
+            </div>
+        </body>
+        </html>
